@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        /* Basic styling for the profile page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
+            overflow: hidden;
+            border: 2px solid #0960d2f0;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            flex-grow: 1;
+        }
+
+        .profile-info h2 {
+            margin: 0;
+            color: #333;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .edit-btn {
+            background-color: #0960d2f0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .edit-btn:hover {
+            background-color: #0960d2f0;
+        }
+
+        .profile-details {
+            margin-top: 30px;
+        }
+
+        .profile-details h3 {
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .save-btn {
+            background-color: #0960d2f0;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .save-btn:hover {
+            background-color: #0960d2f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="profile-pic">
+                <img src="https://via.placeholder.com/120" alt="">
+            </div>
+            <div class="profile-info">
+                <h2>Yokesh Madan M</h2>
+                <p>Email: yokeshmadan@gmail.com</p>
+                <button class="edit-btn" onclick="enableEdit()">Edit Profile</button>
+            </div>
+        </div>
+
+        <!-- Profile Details Form -->
+        <div class="profile-details">
+            <h3>Profile Details</h3>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" value="Yokesh Madan M" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" value="yokeshmadan@gmail.com" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio" disabled>I'm a software engineer with 5 years of experience in full stack development.</textarea>
+                </div>
+                <button type="submit" class="save-btn" disabled>Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to enable the form fields for editing
+        function enableEdit() {
+            document.getElementById("name").disabled = false;
+            document.getElementById("email").disabled = false;
+            document.getElementById("bio").disabled = false;
+            document.querySelector(".save-btn").disabled = false;
+        }
+    </script>
+
+</body>
+</html>

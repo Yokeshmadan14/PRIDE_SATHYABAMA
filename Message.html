@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Messages</title>
+    <style>
+        /* Basic styling for the messages page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            padding: 20px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .sidebar h2 {
+            color: #0960d2f0;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 4px;
+        }
+
+        .sidebar a:hover {
+            background-color: #0960d2f0;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .main-content h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .messages-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .message-item {
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #0960d2f0;
+        }
+
+        .message-item h4 {
+            margin: 0;
+            color: #333;
+        }
+
+        .message-item p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .message-item small {
+            display: block;
+            margin-top: 5px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main container with sidebar and content -->
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <a href="#">Profile</a>
+            <a href="#">Messages</a>
+            <a href="#">Notifications</a>
+            <a href="#">Settings</a>
+            <a href="login.html">Logout</a>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <h2>Your Messages</h2>
+            <ul class="messages-list">
+                <li class="message-item">
+                    <h4>Message from Admin</h4>
+                    <p>Welcome to the platform! We hope you enjoy your experience.</p>
+                    <small>Received: October 20, 2024, 10:30 AM</small>
+                </li>
+                <li class="message-item">
+                    <h4>Update Available</h4>
+                    <p>A new update has been released for the application. Please visit the update section to learn more.</p>
+                    <small>Received: October 19, 2024, 2:15 PM</small>
+                </li>
+                <li class="message-item">
+                    <h4>Reminder: Event Tomorrow</h4>
+                    <p>Don't forget about the alumni networking event happening tomorrow at 4:00 PM.</p>
+                    <small>Received: October 18, 2024, 1:45 PM</small>
+                </li>
+                <li class="message-item">
+                    <h4>Welcome to the Platform!</h4>
+                    <p>Thank you for joining our community. Feel free to explore and connect with other alumni.</p>
+                    <small>Received: October 17, 2024, 9:00 AM</small>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
